@@ -1,0 +1,43 @@
+{
+  "aboutProps": {
+    "mainText": "Hello! I am Abdullah- AB for short.",
+    "description": [
+      "I used to love web development, but recently I find myself leaning towards AI and python.",
+      "When I was more interested, I mainly used ReactJS and NextJS as the former's framework.",
+      "I have created a particularly cool application then, which is present on the projects section of this page.",
+      "I had a particular distaste of angular as a React 'enjoyer' due to its pretty weird looping syntax.",
+      "as well as how components are structured.",
+      "After all, a component folder here is basically a single tsx file there, especially with TailwindCSS.",
+      "I have also learned a lot of UI libraries on react (which maybe are also supported by typescript) such as ShadcnUI and Framer Motion.",
+      "I also heard Angular's state and side effect management may not be as straightforward.",
+      "Dissing Angular aside, I hope that this course will reignite my burnt passion in this area of tech."
+    ]
+  },
+  "contactProps": {
+    "mainText": "You can contact me on",
+    "links": {
+      "instagram": "https://www.instagram.com/abeeedd__",
+      "linkedIn": "https://www.linkedin.com/in/abdullah-alojado-44517a251/",
+      "github": "https://github.com/courroux01/"
+    }
+  },
+  "footerProps": {
+    "mainText": "Made by: Abdullah Alojado - Sheridan Student",
+    "listLabel": "Technologies Used:",
+    "technologies": [
+      "HTML5",
+      "CSS6",
+      "JavaScript",
+      "AngularJS",
+      "TypeScript",
+      "Material UI",
+      "NodeJS - NPM",
+      "Git and Github"
+    ]
+  },
+  "headerProps": {
+    "name": "Abdullah Alojado",
+    "role": "Sheridan Student",
+    "motto": "\"Opportunity knocks only once.\""
+  }
+}

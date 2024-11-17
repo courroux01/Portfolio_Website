@@ -1,0 +1,19 @@
+<div class="contact beautifulBox lightBorder">
+  <h2>
+    <label for="contactList">{{ mainText }}</label>
+  </h2>
+  <ul id="contactList">
+    <li *ngFor="let kv of linkKVArray">
+      <a
+        class="darkColor"
+        [ngClass]="{
+          lightBackground: isDarkMode,
+          darkBorder: !isDarkMode
+        }"
+        [href]="kv[1]"
+        target="_blank"
+        >{{ kv[0] }}</a
+      >
+    </li>
+  </ul>
+</div>

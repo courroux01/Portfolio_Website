@@ -1,0 +1,76 @@
+<div class="projects beautifulBox lightBorder">
+  <form
+    class="projectsForm"
+    [ngClass]="{
+      lightBorder: !isDarkMode
+    }"
+  >
+    <h2>Search a Project:</h2>
+    <mat-form-field class="projectsFormField">
+      <mat-label></mat-label>
+      <input
+        class="projectsFormInput"
+        matInput
+        placeholder="Random Project"
+        [(ngModel)]="currentSearch"
+        name="projectSearch"
+        required
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      (click)="renderChange()"
+      class="projectsFormButton"
+      [ngClass]="{
+        lightBorder: isDarkMode,
+        darkBorder: !isDarkMode,
+        lightBackground: !isDarkMode,
+        darkBackground: isDarkMode,
+        lightColor: isDarkMode,
+        darkColor: !isDarkMode
+      }"
+    >
+      Search
+    </button>
+  </form>
+  <mat-tab-group>
+    <mat-tab
+      [ngClass]="{
+        lightBorder: !isDarkMode,
+        darkBorder: isDarkMode
+      }"
+      *ngFor="let project of currentProjects"
+    >
+      <ng-template mat-tab-label>
+        <span
+          class="projectLabel"
+          [ngClass]="{
+            darkProjectLabelHover: isDarkMode,
+            lightProjectLabelHover: !isDarkMode
+          }"
+          >{{ project.id }}</span
+        >
+      </ng-template>
+      <mat-card>
+        <mat-card-header class="darkColor">
+          <mat-card-title class="projectTitle">{{
+            project.title
+          }}</mat-card-title>
+          <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <img [src]="project.image" alt="Project Image" />
+          <h6 class="orangeColor">Project Description:</h6>
+          <mat-list>
+            <mat-list-item
+              class="darkColor"
+              *ngFor="let sentence of project.description"
+            >
+              {{ sentence }}
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</div>

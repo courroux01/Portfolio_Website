@@ -1,0 +1,9 @@
+<footer class="footer beautifulBox lightBorder">
+  <h2>{{ mainText }}</h2>
+  <label for="footerTechnologies">{{ listLabel }}</label>
+  <ul id="footerTechnologies">
+    <li *ngFor="let technology of technologies">
+      {{ technology }}
+    </li>
+  </ul>
+</footer>

@@ -1,0 +1,316 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --darker: #091d26;
+  --dark: #094044;
+  --orange: #d94f2a;
+  --light: #fcdebd;
+  --lighter: #ede6df;
+  --borderRadius: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", "Helvetica Neue", Helvetica, Arial;
+  letter-spacing: 0.2px;
+}
+
+body {
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: var(--darker);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* To prevent elements from overflowing horizontally */
+.lightBorder,
+.darkBorder {
+  overflow: hidden;
+}
+
+.lightBorder {
+  box-shadow: 2px 2px 1px var(--light);
+  border: 1px solid var(--light);
+  border-radius: var(--borderRadius);
+}
+
+.darkBorder {
+  box-shadow: 2px 2px 1px var(--darker);
+  border: 1px solid var(--dark);
+  border-radius: var(--borderRadius);
+}
+
+.beautifulBox {
+  padding: 10px 20px;
+  border-radius: var(--borderRadius);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lightBox {
+  background: var(--light);
+}
+
+mat-tab-header {
+  margin-bottom: 16px;
+  border: 1px solid var(--light);
+  border-radius: var(--borderRadius);
+  margin: 10px;
+  text-transform: uppercase;
+  height: 50px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.darkProjectLabelHover:hover {
+  transition: all 0.1s ease-in;
+  border-bottom: 2px solid var(--light);
+}
+
+.lightProjectLabelHover:hover {
+  transition: all 0.1s ease-in;
+  border-bottom: 2px solid var(--darker);
+}
+
+.mat-mdc-tab.mdc-tab .mdc-tab__text-label {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+mat-tab-body {
+  background: var(--light);
+}
+
+mat-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent horizontal overflow */
+}
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rootContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 10px;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  margin: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/*footer*/
+.footer h2 {
+  color: var(--orange);
+  font-size: 24px;
+}
+
+.footer label {
+  font-size: 16px;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 10px;
+  border-radius: calc(var(--borderRadius) / 2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lightBackground {
+  background: var(--light);
+}
+
+.lightColor {
+  color: var(--light);
+}
+
+.darkBackground {
+  background: var(--darker);
+}
+
+.darkColor {
+  color: var(--darker);
+}
+
+.footer ul li {
+  flex: 1 1 25%;
+  padding: 5px;
+}
+
+/*projects*/
+.projects h6,
+mat-card-header > * {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.mat-tab-group {
+  width: 100%;
+  height: 100%;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow-y: auto; /* Allows content inside the card to scroll if it exceeds available space */
+  overflow-x: auto;
+}
+
+mat-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%; /* Ensures image doesn't overflow */
+}
+
+.orangeColor {
+  color: var(--orange);
+}
+
+mat-card-content h6 {
+  font-size: 28px;
+}
+
+/*header*/
+.header h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.header h3,
+.header h5 {
+  font-weight: 400;
+}
+
+/*contact*/
+.contact h2 {
+  color: var(--orange);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.contact {
+  padding: 20px 0;
+}
+
+.contact ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact ul li {
+  border-radius: calc(var(--borderRadius) / 2);
+}
+
+.contact ul li a {
+  border-radius: calc(var(--borderRadius) / 2);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.contact ul li a:hover {
+  background: var(--darker);
+  color: var(--lighter);
+  transform: scale(1.05);
+}
+
+/*about*/
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 30px;
+}
+
+.about h2 {
+  color: var(--orange);
+  margin: 10px 0;
+}
+
+.projectsForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.projectsFormButton {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.projectsFormButton:hover {
+  transition: 0.5s linear all;
+  transform: scale(1.05);
+}
+
+.projectsFormField {
+  position: relative;
+  margin-top: 20px;
+}
+
+.projectTitle {
+  font-size: 48px !important;
+}

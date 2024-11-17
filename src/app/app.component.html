@@ -1,0 +1,90 @@
+<div
+  class="rootContainer"
+  [ngClass]="{
+    lightColor: isDarkMode,
+    lightBackground: !isDarkMode,
+    darkBackground: isDarkMode,
+    darkColor: !isDarkMode,
+    lightBorder: isDarkMode,
+    darkBorder: !isDarkMode
+  }"
+>
+  <div
+    [ngClass]="{
+      lightColor: isDarkMode,
+      lightBackground: !isDarkMode,
+      darkBackground: isDarkMode,
+      darkColor: !isDarkMode,
+      lightBorder: isDarkMode,
+      darkBorder: !isDarkMode
+    }"
+    [ngStyle]="{ padding: '10px 0' }"
+  >
+    <h1 class="orangeColor">Dark Mode Toggle</h1>
+    <label for="darkModeToggle">
+      <input
+        type="checkbox"
+        id="darkModeToggle"
+        (change)="toggleDarkMode()"
+        [checked]="isDarkMode"
+      />
+      Dark Mode
+    </label>
+  </div>
+  <app-header
+    [headerProps]="headerProps"
+    [isDarkMode]="isDarkMode"
+    [ngClass]="{
+      lightColor: isDarkMode,
+      lightBackground: !isDarkMode,
+      darkBackground: isDarkMode,
+      darkColor: !isDarkMode,
+      lightBorder: isDarkMode,
+      darkBorder: !isDarkMode
+    }"
+  ></app-header>
+
+  <main class="main">
+    <app-about
+      [aboutProps]="aboutProps"
+      [isDarkMode]="isDarkMode"
+      [ngClass]="{
+        lightColor: isDarkMode,
+        lightBackground: !isDarkMode,
+        darkBackground: isDarkMode,
+        darkColor: !isDarkMode,
+        lightBorder: isDarkMode,
+        darkBorder: !isDarkMode
+      }"
+    ></app-about>
+    <app-projects
+      [projectsProps]="projectsProps"
+      [isDarkMode]="isDarkMode"
+      [ngClass]="{
+        lightColor: isDarkMode,
+        lightBackground: !isDarkMode,
+        darkBackground: isDarkMode,
+        darkColor: !isDarkMode,
+        lightBorder: isDarkMode,
+        darkBorder: !isDarkMode
+      }"
+    ></app-projects>
+    <app-contact
+      [contactProps]="contactProps"
+      [isDarkMode]="isDarkMode"
+      [ngClass]="{
+        lightColor: isDarkMode,
+        lightBackground: !isDarkMode,
+        darkBackground: isDarkMode,
+        darkColor: !isDarkMode,
+        lightBorder: isDarkMode,
+        darkBorder: !isDarkMode
+      }"
+    ></app-contact>
+  </main>
+
+  <app-footer
+    [footerProps]="footerProps"
+    [isDarkMode]="isDarkMode"
+  ></app-footer>
+</div>
